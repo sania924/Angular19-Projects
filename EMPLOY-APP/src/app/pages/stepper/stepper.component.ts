@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './stepper.component.scss',
 })
 export class StepperComponent {
+  //
   designationList: any[] = [];
   roleList: any[] = [];
   stepsList: any[] = [
