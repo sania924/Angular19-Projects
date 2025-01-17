@@ -6,6 +6,7 @@ export class User {
   city: string;
   state: string;
   zipcode: number;
+  isAgree: boolean;
 
   constructor() {
     this.userId = 0;
@@ -15,5 +16,6 @@ export class User {
     this.city = '';
     this.state = '';
     this.zipcode = 0;
+    this.isAgree = false;
   }
 }
