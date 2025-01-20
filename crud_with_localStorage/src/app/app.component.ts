@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'crud_with_localStorage';
-  isNewUser: boolean = false;
+  isNewUser: boolean = true;
   useObj: User = new User();
   userList: User[] = [];
   changeView() {
@@ -48,6 +48,7 @@ export class AppComponent implements OnInit {
     }
     localStorage.setItem('angular', JSON.stringify(this.userList));
     this.changeView();
+    this.useObj = new User();
   }
   isDelete(userId: number) {
     const isdelete = confirm('Are you sure to want delete ');
