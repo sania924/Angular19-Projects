@@ -1,0 +1,38 @@
+{
+  "userList": [
+    {
+      "userId": 0,
+      "email": "sania@123",
+      "password": "124",
+      "address": "Pakistan",
+      "city": "Burewala",
+      "state": "Punjab",
+      "zipcode": 11,
+      "isAgree": false,
+      "id": "37b5"
+    },
+    {
+      "id": "467d",
+      "userId": 0,
+      "email": "saniyayasin925@gmail.com",
+      "password": "1222",
+      "address": "Chichawatni,Punjab Pakistan",
+      "city": "burewala",
+      "state": "Pakistan",
+      "zipcode": "120",
+      "isAgree": true
+    },
+
+    {
+      "id": 0,
+      "userId": 0,
+      "email": "sasin925@gmail.com",
+      "password": "07",
+      "address": "alhud park",
+      "city": "rdf",
+      "state": "",
+      "zipcode": 0,
+      "isAgree": true
+    }
+  ]
+}

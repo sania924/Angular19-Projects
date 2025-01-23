@@ -1,0 +1,161 @@
+<div class="card">
+  <div class="card-header bg-warning">
+    <div class="row">
+      <div class="col-6">UserList</div>
+      <div class="col-6 text-end">
+        <button type="button" class="btn btn-primary" (click)="openModel()">
+          Add new User
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      @for (item of userList; track item) {
+      <div class="col-3">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.email }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ item.address }}</h6>
+            <p class="card-text">
+              {{ item.city }} - {{ item.state }} - {{ item.zipcode }}
+            </p>
+            <button
+              type="button"
+              class="btn btn-link"
+              (click)="onChange(item.id)"
+            >
+              Edit
+            </button>
+            <a href="#" class="card-link">Delete</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" #Modal>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeModel()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <form class="row g-3">
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  [(ngModel)]="useObj.email"
+                  name="email"
+                  id="inputEmail4"
+                />
+              </div>
+              <div class="col-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  [(ngModel)]="useObj.password"
+                  name="password"
+                  id="inputPassword4"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="useObj.address"
+                  name="address"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="useObj.city"
+                  name="city"
+                  id="inputCity"
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select
+                  id="inputState"
+                  class="form-select"
+                  [(ngModel)]="useObj.state"
+                  name="state"
+                >
+                  <option selected>Choose...</option>
+                  <option>Pakistan</option>
+                  <option value="">India</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="useObj.zipcode"
+                  name="zipcode"
+                  id="inputZip"
+                />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    [(ngModel)]="useObj.isAgree"
+                    name="isAgree"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                @if(useObj.id==0){
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  (click)="onSave()"
+                >
+                  Save
+                </button>
+                } @else {
+                <button
+                  type="submit"
+                  class="btn btn-warning"
+                  click="updateUser()"
+                >
+                  Edit
+                </button>
+                }
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
