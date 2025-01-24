@@ -45,6 +45,7 @@ export class CrudJsonServerComponent implements OnInit {
       .post('http://localhost:3000/userList', this.useObj)
       .subscribe((res: any) => {
         this.getUser();
+        this.closeModel();
       });
   }
   onChange(id: number) {
@@ -53,6 +54,7 @@ export class CrudJsonServerComponent implements OnInit {
       .subscribe((res: User) => {
         this.useObj = res;
         this.openModel();
+        this.closeModel();
       });
   }
   updateUser() {
@@ -61,5 +63,15 @@ export class CrudJsonServerComponent implements OnInit {
       .subscribe((res: any) => {
         this.getUser();
       });
+  }
+  onDelete(id: number) {
+    const isDelete = confirm('are you sure to want delete?');
+    if (isDelete) {
+      this.http
+        .delete('http://localhost:3000/userList/' + id)
+        .subscribe((res: any) => {
+          this.getUser();
+        });
+    }
   }
 }

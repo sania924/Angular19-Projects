@@ -13,7 +13,7 @@
     <div class="row">
       @for (item of userList; track item) {
       <div class="col-3">
-        <div class="card" style="width: 18rem">
+        <div class="card mb-4" style="width: 18rem">
           <div class="card-body">
             <h5 class="card-title">{{ item.email }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ item.address }}</h6>
@@ -27,7 +27,13 @@
             >
               Edit
             </button>
-            <a href="#" class="card-link">Delete</a>
+            <button
+              type="button"
+              class="btn btn-link"
+              (click)="onDelete(item.id)"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </div>
@@ -134,7 +140,7 @@
                 </div>
               </div>
               <div class="col-12">
-                @if(useObj.id==0){
+                @if(useObj.id==undefined){
                 <button
                   type="submit"
                   class="btn btn-primary"
@@ -146,7 +152,7 @@
                 <button
                   type="submit"
                   class="btn btn-warning"
-                  click="updateUser()"
+                  (click)="updateUser()"
                 >
                   Edit
                 </button>

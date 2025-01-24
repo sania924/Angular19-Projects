@@ -1,35 +1,34 @@
 {
   "userList": [
     {
+      "id": 0,
       "userId": 0,
-      "email": "sania@123",
-      "password": "124",
-      "address": "Pakistan",
-      "city": "Burewala",
-      "state": "Punjab",
-      "zipcode": 11,
-      "isAgree": false,
-      "id": "37b5"
-    },
-    {
-      "id": "467d",
-      "userId": 0,
-      "email": "saniyayasin925@gmail.com",
-      "password": "1222",
-      "address": "Chichawatni,Punjab Pakistan",
-      "city": "burewala",
+      "email": "saniayasin924@gmail.com",
+      "password": "04554",
+      "address": "hghg",
+      "city": "fgfg",
       "state": "Pakistan",
-      "zipcode": "120",
+      "zipcode": "123",
       "isAgree": true
     },
-
     {
-      "id": 0,
+      "id": "0",
       "userId": 0,
       "email": "sasin925@gmail.com",
       "password": "07",
       "address": "alhud park",
-      "city": "rdf",
+      "city": "hfhhhhhhhhhhh",
+      "state": "",
+      "zipcode": 0,
+      "isAgree": true
+    },
+    {
+      "id": "0",
+      "userId": 0,
+      "email": "sasin925@gmail.com",
+      "password": "07",
+      "address": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
+      "city": "hfhhhhhhhhhhh",
       "state": "",
       "zipcode": 0,
       "isAgree": true
