@@ -1,36 +1,36 @@
 {
   "userList": [
     {
-      "id": 0,
+      "id": "df89",
       "userId": 0,
-      "email": "saniayasin924@gmail.com",
-      "password": "04554",
-      "address": "hghg",
-      "city": "fgfg",
+      "email": "saima@gmail.com",
+      "password": "123",
+      "address": "chungi",
+      "city": "faislabad",
       "state": "Pakistan",
       "zipcode": "123",
       "isAgree": true
     },
     {
-      "id": "0",
+      "id": "3c99",
       "userId": 0,
-      "email": "sasin925@gmail.com",
-      "password": "07",
-      "address": "alhud park",
-      "city": "hfhhhhhhhhhhh",
-      "state": "",
-      "zipcode": 0,
+      "email": "ahmad@gmail.com",
+      "password": "ahmad",
+      "address": "Gulgashat",
+      "city": "Multan",
+      "state": "Pakistan",
+      "zipcode": "123",
       "isAgree": true
     },
     {
-      "id": "0",
+      "id": "87d5",
       "userId": 0,
-      "email": "sasin925@gmail.com",
-      "password": "07",
-      "address": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
-      "city": "hfhhhhhhhhhhh",
-      "state": "",
-      "zipcode": 0,
+      "email": "ali@gmail.com",
+      "password": "124",
+      "address": "alhumad park",
+      "city": "lahore",
+      "state": "Pakistan",
+      "zipcode": "023",
       "isAgree": true
     }
   ]

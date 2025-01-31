@@ -23,12 +23,16 @@ export class CrudJsonServerComponent implements OnInit {
   ngOnInit(): void {
     this.getUser();
   }
+  reset() {
+    this.useObj = new User(); // Reset object to a new instance
+  }
   getUser() {
     this.http
       .get<User[]>('http://localhost:3000/userList')
       .subscribe((res: User[]) => {
         this.userList = res;
       });
+    this.reset();
   }
   openModel() {
     if (this.Modal) {
@@ -48,13 +52,13 @@ export class CrudJsonServerComponent implements OnInit {
         this.closeModel();
       });
   }
+  //
   onChange(id: number) {
     this.http
       .get<User>('http://localhost:3000/userList/' + id)
       .subscribe((res: User) => {
         this.useObj = res;
         this.openModel();
-        this.closeModel();
       });
   }
   updateUser() {
@@ -62,6 +66,7 @@ export class CrudJsonServerComponent implements OnInit {
       .put('http://localhost:3000/userList/' + this.useObj.id, this.useObj)
       .subscribe((res: any) => {
         this.getUser();
+        this.closeModel();
       });
   }
   onDelete(id: number) {

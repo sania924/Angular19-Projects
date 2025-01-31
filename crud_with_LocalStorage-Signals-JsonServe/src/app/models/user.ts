@@ -1,5 +1,5 @@
 export class User {
-  id: any;
+  id?: any;
   userId: number;
   email: string;
   password: any;
@@ -10,7 +10,6 @@ export class User {
   isAgree: boolean;
 
   constructor() {
-    this.id = undefined;
     this.userId = 0;
     this.email = '';
     this.password = 0;
